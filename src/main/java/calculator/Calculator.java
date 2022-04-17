@@ -1,5 +1,8 @@
+package calculator;
 import java.util.ArrayList;
 import java.util.*;
+
+
 public class Calculator{
     public static Double max_list(ArrayList <Double> nums)
     {
