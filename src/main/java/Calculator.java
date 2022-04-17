@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+import java.util.*;
 public class Calculator{
     public static Double max_list(ArrayList <Double> nums)
     {
@@ -118,30 +118,59 @@ public class Calculator{
 
     public static void main(String[] args)
     {
-        ArrayList <Double> test = new ArrayList<Double>();
-        test.add(2.0);
-        test.add(3.0);
-        test.add(4.0);
-        test.add(5.0);
+        Scanner sc = new Scanner(System.in);
 
-        ArrayList <Integer> test1 = new ArrayList<Integer>();
-        test1.add(2);
-        test1.add(3);
-        test1.add(4);
-        test1.add(5);
+        System.out.print("User menu option: \n 1.Square root function \n 2. Factorial function \n 3. Natural Logarithm(base e) \n 4. Power function \n");
+        int option = 0;
 
-        System.out.println(max_list(test));
-        System.out.println(min_list(test));
-        System.out.println(sum_list(test));
-        System.out.println(mult_list(test));
+        option = sc.nextInt();
 
-        System.out.println(gcd_list(test1));
-        System.out.println(lcm_list(test1));
 
-        System.out.println(square_root(5.0));
-        System.out.println(power(5.0, 2.0));
-        System.out.println(nat_log(2.73));
-        System.out.println(fac(5));
+        //user options
+        if(option==1)
+        {
+            //Takes only numbers >= 0
+            //Error handling done, returns NaN if negative number
+            System.out.print("Enter the number for which you wish to calculate: \n");
+            double num = sc.nextDouble();
+
+            System.out.println("Square root of " + num + " is " + square_root(num));
+        }
+        else if(option==2)
+        {
+            //Takes only integer as input
+            System.out.print("Enter the number for which you wish to calculate: \n");
+            int num = sc.nextInt();
+
+            if (num < 0)
+            {
+                System.out.print("Factorial of a negative number is not defined. \n");
+            }
+            else
+            {
+                System.out.println("Factorial of " + num + " is " + fac(num));
+            }
+        }
+        else if(option==3)
+        {
+            //Negative no. -> NaN, 0 -> -Infinity, Infinity -> Infinity
+            System.out.print("Enter the number for which you wish to calculate: \n");
+            double num = sc.nextDouble();
+
+            System.out.println("Natural Logarithm(base e) of " + num + " is " + nat_log(num));
+        }
+        else if(option==4)
+        {
+            System.out.print("Enter the number for which you wish to calculate: \n");
+            double num = sc.nextDouble();
+
+            System.out.print("Enter the exponent number: \n");
+            double exp = sc.nextDouble();
+            System.out.println("Power of " + num + " is " + power(num, exp));
+        }
+        else{
+            System.out.print("Wrong input for selecting the options. Kindly choose from 1,2,3,4 \n");
+        }
 
     }
 }
