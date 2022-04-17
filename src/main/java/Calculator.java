@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 public class Calculator{
     public static Double max_list(ArrayList <Double> nums)
     {
@@ -92,6 +93,28 @@ public class Calculator{
         return ans;
     }
 
+    public static Double square_root(Double x)
+    {
+        return Math.sqrt(x);
+    }
+
+    public static Double power(Double a, Double b)
+    {
+        return Math.pow(a, b);
+    }
+
+    public static Double nat_log(Double x)
+    {
+        return Math.log(x);
+    }
+
+    public static int fac(int x)
+    {
+        if(x == 0)
+            return 1;
+        return x*fac(x-1);
+    }
+
 
     public static void main(String[] args)
     {
@@ -114,6 +137,11 @@ public class Calculator{
 
         System.out.println(gcd_list(test1));
         System.out.println(lcm_list(test1));
+
+        System.out.println(square_root(5.0));
+        System.out.println(power(5.0, 2.0));
+        System.out.println(nat_log(2.73));
+        System.out.println(fac(5));
 
     }
 }
