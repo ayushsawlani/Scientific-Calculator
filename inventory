@@ -1,2 +1,2 @@
 [docker]
-20.25.124.243 ansible_ssh_private_key_file=/home/ayush/IdeaProjects/AyushVM_key_0418.pub ansible_ssh_user=Ayush
+20.25.124.243 ansible_ssh_user=Ayush
