@@ -1,5 +1,2 @@
-[ubuntu20]
-172.17.0.1 ansible_user=Ayush
-
 [docker]
 20.25.124.243 ansible_ssh_user=Ayush
