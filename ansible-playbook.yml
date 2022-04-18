@@ -1,6 +1,6 @@
 ---
 - name: Pull docker image
-  hosts: all
+  hosts: 20.25.124.243
   tasks:
     - name: Pull image
       docker_image:
