@@ -1,0 +1,9 @@
+---
+- name: Pull docker image
+  hosts: ubuntu
+  tasks:
+    - name: Pull image
+      docker_image:
+        name: sawlaniji/calculator:latest
+        source: pull
+        force_source: yes
